@@ -1,8 +1,14 @@
 Template.Feed.events({
 
 	"submit form": function(event, template) {
+
     event.preventDefault();
-    console.log(event.target.text.value);
-	}
+    var formtext = event.target.text.value;
+    console.log(formtext);
+    Posts.insert({
+    	text: formtext
+    });
+
+  }
 
 });
