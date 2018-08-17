@@ -1,6 +1,6 @@
 Template.Feed.events({
 
-	"submit form": function(event, template) {
+  "submit form": function(event, template) {
 
     event.preventDefault();
     var formtext = event.target.text.value;
@@ -8,6 +8,19 @@ Template.Feed.events({
     Posts.insert({
     	text: formtext
     });
+
+    event.target.text.value = "";
+
+  }
+
+});
+
+Template.Feed.helpers({
+
+  Posts: function(){
+
+    var CollectionPosts = Posts.find().fetch();
+    return CollectionPosts;
 
   }
 
