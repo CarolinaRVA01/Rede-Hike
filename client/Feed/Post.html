@@ -6,10 +6,14 @@
     </div>
     <div class="panel-body">
       <div>{{text}}</div>
+      {{#if userliked}}
+      <button class="btn btn-default dislike-button">Descurtir</button>
+      {{else}}
       <button class="btn btn-default like-button">Curtir</button>
+      {{/if}}
+      <div>{{likenumber}} curtidas</div>
     </div>
   </div>
-
 
 </template>
 

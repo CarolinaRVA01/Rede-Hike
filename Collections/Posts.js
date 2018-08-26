@@ -22,6 +22,14 @@ Meteor.methods({
   		}
   	});
 
+  },
+
+  "dislikepost": function(postId) {
+  	Posts.update(postId, {
+  		$pull: {
+  			likes: Meteor.userId()
+  		}
+  	});
   }
 
 });
