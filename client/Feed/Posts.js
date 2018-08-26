@@ -19,6 +19,10 @@ Template.Post.helpers({
     } else {
         return true;
     }
+  },
+
+  comments: function() {
+    return Comments.find({post: this._id}).fetch();
   }
  
 });

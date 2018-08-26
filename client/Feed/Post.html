@@ -12,6 +12,12 @@
       <button class="btn btn-default like-button">Curtir</button>
       {{/if}}
       <div>{{likenumber}} curtidas</div>
+
+      {{#each comments}}
+        {{> Comment}}
+      {{/each}}
+
+      {{> NewComment}}
     </div>
   </div>
 
